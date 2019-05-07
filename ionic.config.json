@@ -1,5 +1,7 @@
 {
   "name": "portal-core",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
