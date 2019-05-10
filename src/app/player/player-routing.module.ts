@@ -11,7 +11,10 @@ const routes: Routes = [
     path: 'play',
     loadChildren: './play/play.module#PlayPageModule'
   },
-  { path: 'favorite', loadChildren: './favorite/favorite.module#FavoritePageModule' },
+  { 
+    path: 'favorite', 
+    loadChildren: './favorite/favorite.module#FavoritePageModule' 
+  },
 ];
 
 @NgModule({

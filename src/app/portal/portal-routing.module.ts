@@ -11,7 +11,8 @@ const routes: Routes = [
     path: 'select',
     loadChildren: './select/select.module#SelectPageModule'
   },
-  { path: 'search', 
+  { 
+    path: 'search', 
     loadChildren: './search/search.module#SearchPageModule' 
   }
 ];
