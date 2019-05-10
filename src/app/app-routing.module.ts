@@ -18,7 +18,12 @@ const routes: Routes = [
   {
     path: 'portal',
     loadChildren: './portal/portal.module#PortalModule'
+  },
+  {
+    path: 'player',
+    loadChildren: './player/player.module#PlayerModule'
   }
+
 ];
 
 @NgModule({

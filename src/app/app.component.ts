@@ -24,6 +24,11 @@ export class AppComponent {
       title: 'Portal',
       url: '/portal',
       icon: 'grid'
+    },
+    {
+      title: 'Player',
+      url: '/player',
+      icon: 'musical-notes'
     }
   ];
 

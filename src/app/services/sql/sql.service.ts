@@ -63,7 +63,11 @@ export class SQLService {
     console.log('SQL file imported');
     this.http.get(path, { responseType: 'text' })
       .subscribe(sql => {
-        const batch = sql.split(';\n');
+        sql = sql.replace(/[\n\r]/gm,''); 
+        const batch = sql.split(';');
+        if(batch[batch.length-1] === ""){
+          batch.pop();
+        }
         console.log(JSON.stringify(batch));
         this.db.sqlBatch(batch).then(() => {
           this.dbReady.next(true);

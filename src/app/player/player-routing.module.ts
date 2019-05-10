@@ -4,20 +4,18 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'select',
+    redirectTo: 'play',
     pathMatch: 'full'
   },
   {
-    path: 'select',
-    loadChildren: './select/select.module#SelectPageModule'
+    path: 'play',
+    loadChildren: './play/play.module#PlayPageModule'
   },
-  { path: 'search', 
-    loadChildren: './search/search.module#SearchPageModule' 
-  }
+  { path: 'favorite', loadChildren: './favorite/favorite.module#FavoritePageModule' },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PortalRoutingModule { }
+export class PlayerRoutingModule { }
